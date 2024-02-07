@@ -1,6 +1,6 @@
 # BootCamp_Project1
 ## Executive Producers
-Travis Cook, Matthew Groh, Marshal Rittenger
+Travis Cook, Matthew Groh, Marshal Rittenger, Julia Olson
 
 ## Proposal:  
 We are a production company (Don't Panic Productions) that will be pitching a Netflix original. Before that, we need to analyze the Netflix  
