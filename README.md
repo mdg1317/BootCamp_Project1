@@ -13,14 +13,15 @@ Our initial analysis aimed to determine Netflix's preference between films and T
 likelihood of them acquiring a film project.  However, we discovered that TV series tend to receive higher ratings on IMDb through histogram and t-test comparisons, 
 indicating a significant statistical difference in ratings. Despite TV series receiving higher ratings, we favored producing a movie due to its 
 one-time production nature. We further analyzed the ideal movie length, finding that films between 90-104 minutes tend to dominate Netflix's catalog.  
+
 We also wanted to see whether varying movie lengths received different ratings. Our line chart analysis hinted that longer films tend to receive better ratings.  To 
 determine if there is more to this, we created a scatterplot analysis of runtime against IMDb ratings to investigate any correlation. The resulting r-value of 0.13 
 signifies a very weak correlation, suggesting that movie length is unlikely to reflect rating and should not be used to influence our decision-making.
 
 Cleaning our IMDB Scores:
 In our dataset, the number of IMDb votes for each title is visible. Obscure titles with only a few votes can disproportionately influence the IMDb score, impacting the 
-overall average. To address this, we applied quartiles to remove the lowest 25% of vote counts, while still retaining the top 25%. This approach helps mitigate the 
-impact of lower outliers on the IMDb scores, ensuring a more accurate representation of each movie
+overall average. To address this, when looping into movies vs. tv shows, we applied quartiles to remove the lowest 25% of vote counts, while still retaining the top 25%. 
+This approach helps mitigate the impact of lower outliers on the IMDb scores, ensuring a more accurate representation of each movie
 
 For our actor analysis, we had to merge the two CSV files to get the full cast list for each film entry. Then from that we created another dataframe that grouped
 the relevant data by actor. In this case, what was most important was the mean IMDB score for each actor and the sum total of votes on IMDB that their films and
