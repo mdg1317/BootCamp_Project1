@@ -9,6 +9,7 @@ elements are common in those genres? What combinations of leading actors would b
 this will go into formulating our ideal project to pitch to Netflix
 
 ## Process:
+### Media Type Analysis:
 Our initial analysis aimed to determine Netflix's preference between films and TV series. It revealed that 64% of their catalog consists of movies, suggesting a higher 
 likelihood of them acquiring a film project.  However, we discovered that TV series tend to receive higher ratings on IMDb through histogram and t-test comparisons, 
 indicating a significant statistical difference in ratings. Despite TV series receiving higher ratings, we favored producing a movie due to its 
@@ -18,11 +19,38 @@ We also wanted to see whether varying movie lengths received different ratings. 
 determine if there is more to this, we created a scatterplot analysis of runtime against IMDb ratings to investigate any correlation. The resulting r-value of 0.13 
 signifies a very weak correlation, suggesting that movie length is unlikely to reflect rating and should not be used to influence our decision-making.
 
-Cleaning our IMDB Scores:
+### Cleaning our IMDB Scores:
 In our dataset, the number of IMDb votes for each title is visible. Obscure titles with only a few votes can disproportionately influence the IMDb score, impacting the 
 overall average. To address this, when looping into movies vs. tv shows, we applied quartiles to remove the lowest 25% of vote counts, while still retaining the top 25%. 
-This approach helps mitigate the impact of lower outliers on the IMDb scores, ensuring a more accurate representation of each movie
+This approach helps mitigate the impact of lower outliers on the IMDb scores, ensuring a more accurate representation of each movie.
 
+### Genre Analysis:
+After deciding that movies are more dominant on Netflix, our next analysis aimed to determine
+which genres are most common and popular in these movies. When looking at individual genres,
+we found that about 65% of Netflix movies contain the genre "drama" and almost 40% contain
+"comedy". Some difficulties with this analysis were that several of the genres listed in the data
+are rather vague or all-encompassing, such as "drama", or are more akin to mediums,
+such as "animation". Therefore, for our purposes, we used the top genres we deemed
+most fitting of the term.
+
+We followed up the single genre analysis with analyzing which genre-pairs between our previously-decided
+top genres were most common on Netflix. This analysis showed that "crime/thriller" and "comedy/romance"
+were easily the most popular genre-pairs, present in about 35% and 30% of Netflix movies respectively.
+Therefore, we decided to combine these top results to make our movie a crime/thriller/comedy/romance.
+
+### Keyword Analysis:
+After determining the genres for our movie, our next analysis aimed to determine what elements and themes
+we should include in our movie based on common keywords in Netflix movies of those genres.
+When looking at crime/thriller movies, "police" was the most common keyword, appearing in about 17.5% of
+movies. Other common words included "crime", "young", "case", and "murder", rather unsurprisingly for
+crime/thrillers. For comedy/romance movies, "love" was overwhelmingly the most common keyword, appearing
+in about 45% of movie descriptions. Other common words included "different", "college", "journey", and "school",
+again unsurprising for the genres. We concluded from this that the most popular Netflix crime/thrillers contain
+largely the basic elements of a murder case and investigation and the most popular comedy/romances contain
+young love forming primarily in a school setting. Since we're combining these genre-pairs, our movie will contain
+young love forming in the midst of a murder investigation.
+
+### Actor Analysis:
 For our actor analysis, we had to merge the two CSV files to get the full cast list for each film entry. Then from that we created another dataframe that grouped
 the relevant data by actor. In this case, what was most important was the mean IMDB score for each actor and the sum total of votes on IMDB that their films and
 movies received. We also only considered actors in more than one production on Netflix, to improve our sample size. We grouped and sorted first by actors 
