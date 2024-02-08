@@ -8,6 +8,9 @@ types of productions would be most likely to succeed. Would Netflix be more like
 elements are common in those genres? What combinations of leading actors would be successful? And finally, what other countries should we partner with and why? All of 
 this will go into formulating our ideal project to pitch to Netflix
 
+## Data Source:
+https://www.kaggle.com/datasets/victorsoeiro/netflix-tv-shows-and-movies
+
 ## Process:
 ### Media Type Analysis:
 Our initial analysis aimed to determine Netflix's preference between films and TV series. It revealed that 64% of their catalog consists of movies, suggesting a higher 
